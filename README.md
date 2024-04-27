@@ -1,38 +1,35 @@
-# Project Title
-# Error Handling Smart Contract
+# ErrorHandlingContract
+
+This Solidity program showcases different error handling techniques in smart contracts. It includes functions for `require`, `revert`, and `assert` statements to handle different scenarios when dealing with even numbers.
 
 ## Description
 
-This Solidity smart contract demonstrates the usage of error handling statements such as `require()`, `assert()`, and `revert()` in Ethereum smart contract development. It includes examples of how to validate input conditions, assert internal consistency, and manually revert transactions with custom error messages.
+This program is a Solidity smart contract that demonstrates error handling techniques using `require`, `revert`, and `assert` statements. It provides functions to set a new value, perform division, and intentionally revert transactions based on specific conditions.
+
+### Functions
+
+- **setValue(uint256 _newValue):** Sets the new value only if it is greater than the current value. Uses `require` statement for validation.
+
+- **assertExample(uint256 _a, uint256 _b):** Performs division of two numbers while ensuring that the divisor is not zero. Utilizes `assert` statement for validation.
+
+- **revertExample():** Always reverts the transaction with a predefined message. Demonstrates the usage of `revert` statement.
 
 ## Getting Started
 
-### Installing
+### Executing Program
 
-* To use this smart contract, you can either copy the code directly or clone the repository from GitHub.
+To run this program, you can use Remix, an online Solidity IDE. Visit the Remix website at [https://remix.ethereum.org/](https://remix.ethereum.org/).
 
-### Executing program
-
-* To deploy and interact with the smart contract, you need an Ethereum development environment set up, such as Ganache for local development or a testnet like Rinkeby for testing on a public network.
-* Compile the smart contract using a Solidity compiler, such as `solc` or Remix IDE.
-
-* Deploy the compiled contract to your Ethereum environment using a deployment tool like Remix IDE, Truffle, or Hardhat.
-* Interact with the deployed contract through a web3-enabled interface, such as Remix IDE, Truffle console, or your custom DApp.
-
-## Help
-
-* If you encounter any issues or have questions about using the smart contract, feel free to reach out to the contributors for assistance.
-
+1. Once on the Remix website, create a new file by clicking on the "+" icon in the left-hand sidebar. Save the file with a .sol extension (e.g., ErrorHandlingContract.sol).
+2. Copy and paste the provided Solidity code into the file.
+3. Compile the code by clicking on the "Solidity Compiler" tab in the left-hand sidebar. Make sure the compiler version matches or is compatible with the version specified in the code.
+4. Deploy the contract by clicking on the "Deploy & Run Transactions" tab in the left-hand sidebar. Select the contract from the dropdown menu, and then click on the "Deploy" button.
+5. After deployment, interact with the contract by calling its functions. Click on the contract in the left-hand sidebar, and then click on any of its functions to interact with it.
 
 ## Authors
-
-
-* Srivarenya T
-*  [Srivarenya](https://github.com/srivarenya12)
-
+Srivarenya
+onlysrivarenya@gmail.com
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
