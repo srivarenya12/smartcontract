@@ -1,26 +1,20 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.13;
 
-contract ErrorHandlingContract {
-    uint256 public value;
-
-    function setValue(uint256 _newValue) external {
-        // Example usage of require()
-        require(_newValue > value, "New value must be greater than current value");
-
-        // Set the new value
-        value = _newValue;
+contract Error_handling{
+    string public state = "Number is divisible by 3";
+    function _require(uint256 _x) public view returns (string memory){
+        require(_x %3 == 0,"Input must be divisible by 3");
+        return state;
     }
-
-    function assertExample(uint256 _a, uint256 _b) external pure returns (uint256) {
-        // Example usage of assert()
-        assert(_b != 0);
-        
-        return _a / _b;
+    function _revert(uint256 _x) public view returns (string memory){
+        if(_x%3 != 0){
+            revert("Input must be divisible by 3");
+        }
+        return state;
     }
-
-    function revertExample() external pure {
-        // Example usage of revert()
-        revert("This function always reverts");
+    function _assert(uint256 _x) public view returns (string memory){
+        assert(_x %3 == 0);
+        return state;
     }
 }
